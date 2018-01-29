@@ -103,7 +103,7 @@ for (i in 1:60){
     OS_relev_data[1:3, c('arousal', 'valence', 'familiarity')] <- NA
     OS_relev_data[44:46, c('arousal', 'valence', 'familiarity')] <- NA
     # remove raw data, so the cycle wont enter this "if" in the next cycle if there is no actual data
-    # remove("OS_raw_data")
+    remove("OS_raw_data")
     # write the results in an excel file
     write.xlsx(x = OS_relev_data, file = paste(i, "_recall_", aorb, "_teszt_excel.xlsx", sep = ""),
                sheetName = "Munka1", row.names = FALSE)
